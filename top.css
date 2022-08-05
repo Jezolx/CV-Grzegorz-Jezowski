@@ -10,7 +10,7 @@
   justify-content: space-between;
   align-items: center;
   border-bottom: 2px rgb(225, 225, 225) solid;
-z-index:100;
+  z-index:100;
 }
 .top_button {
   width: 41px;
