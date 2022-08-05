@@ -71,7 +71,7 @@
   min-width: 600px;
   padding-top: 80px;
   position: relative;
-z-index:-1;
+  z-index:-1;
 }
 .inked_in {
   position: absolute;
