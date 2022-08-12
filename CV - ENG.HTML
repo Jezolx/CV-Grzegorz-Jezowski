@@ -17,15 +17,21 @@
     <link rel="stylesheet" href="content.css" />
   </head>
   <body>
+    <script src="code.js"></script>
     <div class="top">
       <div class="top_left">
         <img class="me2" src="image/JA.png" alt="Grzegorz Jezowski" />
       </div>
       <div class="top_center">
-        <input class="search" type="text" placeholder="Search" />
-        <button class="top_button"><img class="search_picture" src="image/search.svg" alt="Search" /></button>
-        <button class="top_button">
-          <img class="search_picture" src="image/voice-search-icon.svg" alt="Voice-Search" />
+        <input
+          class="search"
+          type="text"
+          placeholder="Wyszukaj"
+          id="search_in"
+        />
+        <button class="top_button" onclick="search()">
+          <img class="search_picture" src="image/search.svg" alt="Search" />
+        </button>
       </div>
       <div class="top_right">
         <a href="CV - ENG.HTML"><button class="top_button">EN</button></a>
@@ -36,11 +42,11 @@
     <div class="center">
       <div class="side_menu">
         <a href="#about_me">
-            <div class="side_button">
-              <img class="side_img" src="image/id2.png" alt="ID" />
-              <p class="side_text">About me</p>
-              <div class="info">Some basic information about me</div>
-            </div>
+          <div class="side_button">
+            <img class="side_img" src="image/id2.png" alt="ID" />
+            <p class="side_text">About me</p>
+            <div class="info">Some basic information about me</div>
+          </div>
         </a>
         <a href="#education">
           <div class="side_button">
@@ -72,163 +78,255 @@
         </a>
       </div>
       <div class="grid">
-        <div class="content" >
+        <div class="content">
           <div class="link" id="about_me"></div>
-          <div class="about_me" >
-                <div class="about_me_text">
-                  <div class="P0">About me</div>
-                  <div class="P1">Name and surname:</div>
-                  <div class="P2">Grzegorz Jeżowski</div>
-                  <div class="P1">Address:</div>
-                  <div class="P2">Sportowa 1/2</div>
-                  <div class="P2">63-000 Środa Wlkp.</div>
-                  <div class="P1">Phone number:</div>
-                  <div class="P2">+48 609 709 477</div>
-                  <div class="P1">Adres &#64;-mali:</div>
-                  <div class="P2">g.jezowski&#64;tlen.pl</div>
-                </div>
-                <div class="me_picture">
-                  <img class="me" src="image/JA.png" alt="Grzegorz Jezowski" />
-                </div>
+          <div class="about_me">
+            <div class="about_me_text">
+              <div class="P0">About me</div>
+              <div class="P1">Name and surname:</div>
+              <div class="P2">Grzegorz Jeżowski</div>
+              <div class="P1">Address:</div>
+              <div class="P2">Sportowa 1/2</div>
+              <div class="P2">63-000 Środa Wlkp.</div>
+              <div class="P1">Phone number:</div>
+              <div class="P2">+48 609 709 477</div>
+              <div class="P1">Adres &#64;-mali:</div>
+              <div class="P2">g.jezowski&#64;tlen.pl</div>
+            </div>
+            <div class="me_picture">
+              <img class="me" src="image/JA.png" alt="Grzegorz Jezowski" />
+            </div>
           </div>
-         <div class="education" id="education">
-              <div class="EP0">Education</div>
-              <div class="edu_container">
-                <div><img class="edu_picture" src="image/eko.jpeg" alt="Uniwertytet Ekonomiczy w Poznaniu"></div>
-                <div class="edu_text">
-                  <div class="P2">University of Economics in Poznań</div>
-                  <div class="P1">Postgraduate studies in accounting</div>
-                  <div class="P1">2010-2021</div>
-                </div>
+          <div class="education" id="education">
+            <div class="EP0">Education</div>
+            <div class="edu_container">
+              <div>
+                <img
+                  class="edu_picture"
+                  src="image/eko.jpeg"
+                  alt="Uniwertytet Ekonomiczy w Poznaniu"
+                />
               </div>
-              <div class="edu_container">
-                <div><img class="edu_picture" src="image/uam.png" alt="Uniwertytet im. Adama Mickiewicza w Poznaniu"></div>
-                <div class="edu_text">
-                  <div class="P2">University of Adam Mickiewicz in Poznań</div>
-                  <div class="P1">Mathematics, Financial Mathematics</div>
-                  <div class="P1" >2005-2010</div>
-                </div>
+              <div class="edu_text">
+                <div class="P2">University of Economics in Poznań</div>
+                <div class="P1">Postgraduate studies in accounting</div>
+                <div class="P1">2010-2021</div>
               </div>
+            </div>
+            <div class="edu_container">
+              <div>
+                <img
+                  class="edu_picture"
+                  src="image/uam.png"
+                  alt="Uniwertytet im. Adama Mickiewicza w Poznaniu"
+                />
+              </div>
+              <div class="edu_text">
+                <div class="P2">University of Adam Mickiewicz in Poznań</div>
+                <div class="P1">Mathematics, Financial Mathematics</div>
+                <div class="P1">2005-2010</div>
+              </div>
+            </div>
           </div>
           <div id="work" class="for_link"></div>
           <div class="EP0">Work experience</div>
-            <div class="edu_container">
-                <div><img class="edu_picture" src="image/homag.jpeg" alt="HOMAG"></div>
-                <div class="edu_text">
-                  <div class="P2">Operational controller</div>
-                  <div class="P1">Homag Services Poland Sp. z o.o.</div>
-                  <div class="P1">2022-actually</div>
-                  <div class="P4">&middot; Business Partner for Purchasing, Dispositions, Strategic Chain Managment (SCM) departments</div>
-                  <div class="P4">&middot; Month-end participation, production close-out steps in SAP. Data control and checking </div>
-                  <div class="P4">&middot; Participation in the implementation of new product designs, cooperation and cooperation with Industral Engineering and R&D</div>
-                  <div class="P4">&middot; Reporting for management, analysis in Excel (Power Pivot and Query), statements in Excel, presentations (Power Point and Thik-cell)</div>
-                  <div class="P4">&middot; Conducting optimization projects (introducing BOT to automatic calculations)</div>
-                  <div class="P4">&middot; Calculation of the cost of production of machines and components in SAP and in some cases also with the use of Excel</div>
-                </div>
+          <div class="edu_container">
+            <div>
+              <img class="edu_picture" src="image/homag.jpeg" alt="HOMAG" />
             </div>
-            <div class="edu_container">
-                <div><img class="edu_picture" src="image/homag.jpeg" alt="HOMAG"></div>
-                <div class="edu_text">
-                  <div class="P2">Operational analyst</div>
-                  <div class="P1">Homag Services Poland Sp. z o.o.</div>
-                  <div class="P1">2018-2022</div>
-                  <div class="P4">&middot; Participation in the implementation of new product designs, cooperation and cooperation with Industral Engineering and R&D</div>
-                  <div class="P4">&middot; Reporting for the management board, analysis in Excel</div>
-                  <div class="P4">&middot; Calculation of the cost of production of machines and components using Excel</div>
-                </div>
-            </div>
-            <div class="edu_container">
-                <div><img class="edu_picture" src="image/homag.jpeg" alt="HOMAG"></div>
-                <div class="edu_text">
-                  <div class="P2">Junior controlling specialist</div>
-                  <div class="P1">Homag Poland Sp. z o.o.</div>
-                  <div class="P1">2016-2018</div>
-                  <div class="P4">&middot; Calculation of the cost of production of machines and components using Excel</div>
-                  <div class="read_more">
-                    <a href="https://www.linkedin.com/in/grzegorz-jezowski-96126460/" target="_blank">
-                        <div class="P4">... more about my professional experience</div>
-                    </a>
-                    <div class="inked_in">Link to Website wiht more detailed information about my profesional experience</div>
-                  </div>
-                </div>
-            </div>
-            <div id="language" class="for_link"></div>
-            <div class="EP0" id="language">Languages</div>
-            <div class="edu_container">
-                <div><img class="edu_picture" src="image/eng.png" alt="HOMAG"></div>
-                <div class="edu_text">
-                  <div class="P2">English</div>
-                  <div class="P1">upper intermediate (B2)</div>
-                </div>
-            </div>
-            <div class="edu_container">
-              <div><img class="edu_picture" src="image/de.png" alt="HOMAG"></div>
-              <div class="edu_text">
-                <div class="P2">German</div>
-                <div class="P1">intermediate (B1)</div>
+            <div class="edu_text">
+              <div class="P2">Operational controller</div>
+              <div class="P1">Homag Services Poland Sp. z o.o.</div>
+              <div class="P1">2022-actually</div>
+              <div class="P4">
+                &middot; Business Partner for Purchasing, Dispositions,
+                Strategic Chain Managment (SCM) departments
               </div>
-            </div>
-            <div class="edu_container">
-              <div><img class="edu_picture" src="image/html.png" alt="HOMAG"></div>
-              <div class="edu_text">
-                <div class="P2">HTML</div>
-                <div class="P1">basic</div>
+              <div class="P4">
+                &middot; Month-end participation, production close-out steps in
+                SAP. Data control and checking
               </div>
-            </div>
-            <div class="edu_container">
-              <div><img class="edu_picture" src="image/css.png" alt="HOMAG"></div>
-              <div class="edu_text">
-                <div class="P2">CSS</div>
-                <div class="P1">basic</div>
+              <div class="P4">
+                &middot; Participation in the implementation of new product
+                designs, cooperation and cooperation with Industral Engineering
+                and R&D
               </div>
-            </div>
-            <div id="hobby" class="for_link"></div>
-            <div class="EP0">Hobbies</div>
-            <div class="edu_container">
-                <div><img class="edu_picture" src="image/lego.png" alt="HOMAG"></div>
-                <div class="edu_text">
-                  <div class="P2">Collecting Lego
-                  </div>
-                  <div class="P5">Green trends are important, but when I heard that LEGO is going to end plastic bricks and switch to sugarcane
-                      decided to start collecting bricks to collect some good old plastic kits. This is how I started collecting sets of LEGO bricks, which turned into a kind of hobby.
-                </div>
-                </div>
-            </div>
-            <div class="gal">
-              <div class="EP0">Gallery:</div>
-              <div class="galery">
-                <div class="column1"><img class="galery_picture" src="image/L1.jpg" alt=""></div>
-                <div class="column2"><img class="galery_picture" src="image/L2.jpg" alt=""></div>
+              <div class="P4">
+                &middot; Reporting for management, analysis in Excel (Power
+                Pivot and Query), statements in Excel, presentations (Power
+                Point and Thik-cell)
               </div>
-            </div>
-            <div class="space"></div>
-            <div class="edu_container">
-              <div><img class="edu_picture" src="image/watch.jpg" alt="HOMAG"></div>
-              <div class="edu_text">
-                <div class="P2">Repair of mechanical watches</div>
-                <div class="P5">One of my hobbies is repairing mechanical watches.
-                  It all started when I bought my first old mechanical watch, and after about two weeks I broke the dial in it.
-                  Since local watchmakers were unable to repair the damage, I decided to search the Internet and found an advertisement with tips on what I needed and many other parts (about 10 kg in total)
-                  The price the seller asked for the tip itself was only slightly less than what he wanted for everything, so I bought it all. And so it all started.
-                  Having 10 kg of parts by trial and error (at the beginning there were more errors), I learned to repair watches and many of the parts I bought, I put together a dozen working pieces.
+              <div class="P4">
+                &middot; Conducting optimization projects (introducing BOT to
+                automatic calculations)
               </div>
-              </div>
-            </div>
-            <div class="gal">
-              <div class="EP0">Gallery:</div>
-              <div class="galery">
-                <div class="column1"><img class="galery_picture" src="image/20220731_213003.jpg" alt=""></div>
-                <div class="column2"><img class="galery_picture" src="image/20220731_213116.jpg" alt=""></div>
+              <div class="P4">
+                &middot; Calculation of the cost of production of machines and
+                components in SAP and in some cases also with the use of Excel
               </div>
             </div>
           </div>
-      <div></div>
-      </div>
-
-
+          <div class="edu_container">
+            <div>
+              <img class="edu_picture" src="image/homag.jpeg" alt="HOMAG" />
+            </div>
+            <div class="edu_text">
+              <div class="P2">Operational analyst</div>
+              <div class="P1">Homag Services Poland Sp. z o.o.</div>
+              <div class="P1">2018-2022</div>
+              <div class="P4">
+                &middot; Participation in the implementation of new product
+                designs, cooperation and cooperation with Industral Engineering
+                and R&D
+              </div>
+              <div class="P4">
+                &middot; Reporting for the management board, analysis in Excel
+              </div>
+              <div class="P4">
+                &middot; Calculation of the cost of production of machines and
+                components using Excel
+              </div>
+            </div>
+          </div>
+          <div class="edu_container">
+            <div>
+              <img class="edu_picture" src="image/homag.jpeg" alt="HOMAG" />
+            </div>
+            <div class="edu_text">
+              <div class="P2">Junior controlling specialist</div>
+              <div class="P1">Homag Poland Sp. z o.o.</div>
+              <div class="P1">2016-2018</div>
+              <div class="P4">
+                &middot; Calculation of the cost of production of machines and
+                components using Excel
+              </div>
+              <div class="read_more">
+                <a
+                  href="https://www.linkedin.com/in/grzegorz-jezowski-96126460/"
+                  target="_blank"
+                >
+                  <div class="P4">
+                    ... more about my professional experience
+                  </div>
+                </a>
+                <div class="inked_in">
+                  Link to Website wiht more detailed information about my
+                  profesional experience
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="language" class="for_link"></div>
+          <div class="EP0" id="language">Languages</div>
+          <div class="edu_container">
+            <div>
+              <img class="edu_picture" src="image/eng.png" alt="HOMAG" />
+            </div>
+            <div class="edu_text">
+              <div class="P2">English</div>
+              <div class="P1">upper intermediate (B2)</div>
+            </div>
+          </div>
+          <div class="edu_container">
+            <div>
+              <img class="edu_picture" src="image/de.png" alt="HOMAG" />
+            </div>
+            <div class="edu_text">
+              <div class="P2">German</div>
+              <div class="P1">intermediate (B1)</div>
+            </div>
+          </div>
+          <div class="edu_container">
+            <div>
+              <img class="edu_picture" src="image/html.png" alt="HOMAG" />
+            </div>
+            <div class="edu_text">
+              <div class="P2">HTML</div>
+              <div class="P1">basic</div>
+            </div>
+          </div>
+          <div class="edu_container">
+            <div>
+              <img class="edu_picture" src="image/css.png" alt="HOMAG" />
+            </div>
+            <div class="edu_text">
+              <div class="P2">CSS</div>
+              <div class="P1">basic</div>
+            </div>
+          </div>
+          <div id="hobby" class="for_link"></div>
+          <div class="EP0">Hobbies</div>
+          <div class="edu_container">
+            <div>
+              <img class="edu_picture" src="image/lego.png" alt="HOMAG" />
+            </div>
+            <div class="edu_text">
+              <div class="P2">Collecting Lego</div>
+              <div class="P5">
+                Green trends are important, but when I heard that LEGO is going
+                to end plastic bricks and switch to sugarcane decided to start
+                collecting bricks to collect some good old plastic kits. This is
+                how I started collecting sets of LEGO bricks, which turned into
+                a kind of hobby.
+              </div>
+            </div>
+          </div>
+          <div class="gal">
+            <div class="EP0">Gallery:</div>
+            <div class="galery">
+              <div class="column1">
+                <img class="galery_picture" src="image/L1.jpg" alt="" />
+              </div>
+              <div class="column2">
+                <img class="galery_picture" src="image/L2.jpg" alt="" />
+              </div>
+            </div>
+          </div>
+          <div class="space"></div>
+          <div class="edu_container">
+            <div>
+              <img class="edu_picture" src="image/watch.jpg" alt="HOMAG" />
+            </div>
+            <div class="edu_text">
+              <div class="P2">Repair of mechanical watches</div>
+              <div class="P5">
+                One of my hobbies is repairing mechanical watches. It all
+                started when I bought my first old mechanical watch, and after
+                about two weeks I broke the dial in it. Since local watchmakers
+                were unable to repair the damage, I decided to search the
+                Internet and found an advertisement with tips on what I needed
+                and many other parts (about 10 kg in total) The price the seller
+                asked for the tip itself was only slightly less than what he
+                wanted for everything, so I bought it all. And so it all
+                started. Having 10 kg of parts by trial and error (at the
+                beginning there were more errors), I learned to repair watches
+                and many of the parts I bought, I put together a dozen working
+                pieces.
+              </div>
+            </div>
+          </div>
+          <div class="gal">
+            <div class="EP0">Gallery:</div>
+            <div class="galery">
+              <div class="column1">
+                <img
+                  class="galery_picture"
+                  src="image/20220731_213003.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="column2">
+                <img
+                  class="galery_picture"
+                  src="image/20220731_213116.jpg"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
         </div>
-
-
-          
+        <div></div>
+      </div>
+    </div>
   </body>
 </html>

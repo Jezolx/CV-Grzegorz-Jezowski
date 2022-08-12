@@ -17,15 +17,21 @@
     <link rel="stylesheet" href="content.css" />
   </head>
   <body>
+    <script src="code.js"></script>
     <div class="top">
       <div class="top_left">
         <img class="me2" src="image/JA.png" alt="Grzegorz Jezowski" />
       </div>
       <div class="top_center">
-        <input class="search" type="text" placeholder="Wyszukaj" />
-        <button class="top_button"><img class="search_picture" src="image/search.svg" alt="Search" /></button>
-        <button class="top_button">
-          <img class="search_picture" src="image/voice-search-icon.svg" alt="Voice-Search" />
+        <input
+          class="search"
+          type="text"
+          placeholder="Wyszukaj"
+          id="search_in"
+        />
+        <button class="top_button" onclick="search()">
+          <img class="search_picture" src="image/search.svg" alt="Search" />
+        </button>
       </div>
       <div class="top_right">
         <a href="CV - ENG.HTML"><button class="top_button">EN</button></a>
@@ -36,11 +42,11 @@
     <div class="center">
       <div class="side_menu">
         <a href="#about_me">
-            <div class="side_button">
-              <img class="side_img" src="image/id2.png" alt="ID" />
-              <p class="side_text">O mnie</p>
-              <div class="info">Podstawowe informacje o mnie</div>
-            </div>
+          <div class="side_button">
+            <img class="side_img" src="image/id2.png" alt="ID" />
+            <p class="side_text">O mnie</p>
+            <div class="info">Podstawowe informacje o mnie</div>
+          </div>
         </a>
         <a href="#education">
           <div class="side_button">
@@ -72,162 +78,258 @@
         </a>
       </div>
       <div class="grid">
-      <div class="content" >
-        <div class="link" id="about_me"></div>
-        <div class="about_me" >
-              <div class="about_me_text">
-                <div class="P0">O mnie</div>
-                <div class="P1">Imię i nazwisko:</div>
-                <div class="P2">Grzegorz Jeżowski</div>
-                <div class="P1">Adres:</div>
-                <div class="P2">Sportowa 1/2</div>
-                <div class="P2">63-000 Środa Wlkp.</div>
-                <div class="P1">Numer telefonu:</div>
-                <div class="P2">+48 609 709 477</div>
-                <div class="P1">Adres &#64;-mali:</div>
-                <div class="P2">g.jezowski&#64;tlen.pl</div>
-              </div>
-              <div class="me_picture">
-                <img class="me" src="image/JA.png" alt="Grzegorz Jezowski" />
-              </div>
-        </div>
-       <div class="education" id="education">
+        <div class="content">
+          <div class="link" id="about_me"></div>
+          <div class="about_me">
+            <div class="about_me_text">
+              <div class="P0">O mnie</div>
+              <div class="P1">Imię i nazwisko:</div>
+              <div class="P2">Grzegorz Jeżowski</div>
+              <div class="P1">Adres:</div>
+              <div class="P2">Sportowa 1/2</div>
+              <div class="P2">63-000 Środa Wlkp.</div>
+              <div class="P1">Numer telefonu:</div>
+              <div class="P2">+48 609 709 477</div>
+              <div class="P1">Adres &#64;-mali:</div>
+              <div class="P2">g.jezowski&#64;tlen.pl</div>
+            </div>
+            <div class="me_picture">
+              <img class="me" src="image/JA.png" alt="Grzegorz Jezowski" />
+            </div>
+          </div>
+          <div class="education" id="education">
             <div class="EP0">Wykształcenie</div>
             <div class="edu_container">
-              <div><img class="edu_picture" src="image/eko.jpeg" alt="Uniwertytet Ekonomiczy w Poznaniu"></div>
+              <div>
+                <img
+                  class="edu_picture"
+                  src="image/eko.jpeg"
+                  alt="Uniwertytet Ekonomiczy w Poznaniu"
+                />
+              </div>
               <div class="edu_text">
                 <div class="P2">Uniwerstytet Ekonomiczny w Poznaniu</div>
                 <div class="P1">Podyplomowe studia z rachunkowości</div>
                 <div class="P1">2010-2021</div>
               </div>
-            </div> 
+            </div>
             <div class="edu_container">
-              <div><img class="edu_picture" src="image/uam.png" alt="Uniwertytet im. Adama Mickiewicza w Poznaniu"></div>
+              <div>
+                <img
+                  class="edu_picture"
+                  src="image/uam.png"
+                  alt="Uniwertytet im. Adama Mickiewicza w Poznaniu"
+                />
+              </div>
               <div class="edu_text">
-                <div class="P2">Uniwerstytet im. Adama Mickiewicza w Poznaniu</div>
+                <div class="P2">
+                  Uniwerstytet im. Adama Mickiewicza w Poznaniu
+                </div>
                 <div class="P1">Matematyka, Matematyka finansowa</div>
-                <div class="P1" >2005-2010</div>
+                <div class="P1">2005-2010</div>
               </div>
-            </div> 
-        </div>
-        <div id="work" class="for_link"></div>
-        <div class="EP0">Doświadczenie zawodowe</div>
+            </div>
+          </div>
+          <div id="work" class="for_link"></div>
+          <div class="EP0">Doświadczenie zawodowe</div>
           <div class="edu_container">
-              <div><img class="edu_picture" src="image/homag.jpeg" alt="HOMAG"></div>
-              <div class="edu_text">
-                <div class="P2">Kontroler operacyjny</div>
-                <div class="P1">Homag Services Poland Sp. z o.o.</div>
-                <div class="P1">2022-obecnie</div>
-                <div class="P4">&middot; Business Partner dla obszarów Purchasing, Dispositions, Strategic Chain Managment (SCM)</div>
-                <div class="P4">&middot; Udział w zamknięciu miesiąca, kroki związane z zamknięciem produkcyjnym w programie SAP. Kontrola i sprawdzanie danych </div>
-                <div class="P4">&middot; Udział w wdrożeniu projektów nowych produktów, wspradzie i współpraca z dzaiłami Industral Engeniering oraz R&D</div>
-                <div class="P4">&middot; Raportowanie dla zarządu, analizy w programie Excel (Power Pivot i Query), zestawienia w programie Excel, prezentacje (Power Point i Thik-cell)</div>
-                <div class="P4">&middot; Prowadzenie projektów optymalizacyjnych (wprowadzenie BOT do automatycznych kalkulacji)</div>
-                <div class="P4">&middot; Kalkulacje kosztu produkcji masznyn i komponentów w SAP oraz w niektórych przypadkach również z wykorzystaniem programu Excel</div>
+            <div>
+              <img class="edu_picture" src="image/homag.jpeg" alt="HOMAG" />
+            </div>
+            <div class="edu_text">
+              <div class="P2">Kontroler operacyjny</div>
+              <div class="P1">Homag Services Poland Sp. z o.o.</div>
+              <div class="P1">2022-obecnie</div>
+              <div class="P4">
+                &middot; Business Partner dla obszarów Purchasing, Dispositions,
+                Strategic Chain Managment (SCM)
               </div>
-          </div> 
-          <div class="edu_container">
-              <div><img class="edu_picture" src="image/homag.jpeg" alt="HOMAG"></div>
-              <div class="edu_text">
-                <div class="P2">Analityk operacyjny</div>
-                <div class="P1">Homag Services Poland Sp. z o.o.</div>
-                <div class="P1">2018-2022</div>
-                <div class="P4">&middot; Udział w wdrożeniu projektów nowych produktów, wspradzie i współpraca z dzaiłami Industral Engeniering oraz R&D</div>
-                <div class="P4">&middot; Raportowanie dla zarządu, analizy w programie Excel</div>
-                <div class="P4">&middot; Kalkulacje kosztu produkcji masznyn i komponentów z wykorzystaniem programu Excel</div>
+              <div class="P4">
+                &middot; Udział w zamknięciu miesiąca, kroki związane z
+                zamknięciem produkcyjnym w programie SAP. Kontrola i sprawdzanie
+                danych
               </div>
-          </div> 
+              <div class="P4">
+                &middot; Udział w wdrożeniu projektów nowych produktów,
+                wspradzie i współpraca z dzaiłami Industral Engeniering oraz R&D
+              </div>
+              <div class="P4">
+                &middot; Raportowanie dla zarządu, analizy w programie Excel
+                (Power Pivot i Query), zestawienia w programie Excel,
+                prezentacje (Power Point i Thik-cell)
+              </div>
+              <div class="P4">
+                &middot; Prowadzenie projektów optymalizacyjnych (wprowadzenie
+                BOT do automatycznych kalkulacji)
+              </div>
+              <div class="P4">
+                &middot; Kalkulacje kosztu produkcji masznyn i komponentów w SAP
+                oraz w niektórych przypadkach również z wykorzystaniem programu
+                Excel
+              </div>
+            </div>
+          </div>
           <div class="edu_container">
-              <div><img class="edu_picture" src="image/homag.jpeg" alt="HOMAG"></div>
-              <div class="edu_text">
-                <div class="P2">Młodszy specjalista ds. controllingu</div>
-                <div class="P1">Homag Poland Sp. z o.o.</div>
-                <div class="P1">2016-2018</div>
-                <div class="P4">&middot; Kalkulacje kosztu produkcji masznyn i komponentów z wykorzystaniem programu Excel</div>
-                <div class="read_more">
-                  <a href="https://www.linkedin.com/in/grzegorz-jezowski-96126460/" target="_blank">
-                    <div class="P4" id="language">... więcej o moim doświadczeniu zawodowym</div>
-                  </a>
-                  <div class="inked_in">Link do strony Internetowej z większą ilością informacji o moim doświadczeniu zawodowym</div>
+            <div>
+              <img class="edu_picture" src="image/homag.jpeg" alt="HOMAG" />
+            </div>
+            <div class="edu_text">
+              <div class="P2">Analityk operacyjny</div>
+              <div class="P1">Homag Services Poland Sp. z o.o.</div>
+              <div class="P1">2018-2022</div>
+              <div class="P4">
+                &middot; Udział w wdrożeniu projektów nowych produktów,
+                wspradzie i współpraca z dzaiłami Industral Engeniering oraz R&D
+              </div>
+              <div class="P4">
+                &middot; Raportowanie dla zarządu, analizy w programie Excel
+              </div>
+              <div class="P4">
+                &middot; Kalkulacje kosztu produkcji masznyn i komponentów z
+                wykorzystaniem programu Excel
+              </div>
+            </div>
+          </div>
+          <div class="edu_container">
+            <div>
+              <img class="edu_picture" src="image/homag.jpeg" alt="HOMAG" />
+            </div>
+            <div class="edu_text">
+              <div class="P2">Młodszy specjalista ds. controllingu</div>
+              <div class="P1">Homag Poland Sp. z o.o.</div>
+              <div class="P1">2016-2018</div>
+              <div class="P4">
+                &middot; Kalkulacje kosztu produkcji masznyn i komponentów z
+                wykorzystaniem programu Excel
+              </div>
+              <div class="read_more">
+                <a
+                  href="https://www.linkedin.com/in/grzegorz-jezowski-96126460/"
+                  target="_blank"
+                >
+                  <div class="P4" id="language">
+                    ... więcej o moim doświadczeniu zawodowym
+                  </div>
+                </a>
+                <div class="inked_in">
+                  Link do strony Internetowej z większą ilością informacji o
+                  moim doświadczeniu zawodowym
                 </div>
               </div>
-          </div> 
+            </div>
+          </div>
           <div class="EP0" id="language">Języki</div>
           <div class="edu_container">
-              <div><img class="edu_picture" src="image/eng.png" alt="HOMAG"></div>
-              <div class="edu_text">
-                <div class="P2">Język angielski</div>
-                <div class="P1">średniozaawansowany (B2)</div>
-              </div>
-          </div> 
+            <div>
+              <img class="edu_picture" src="image/eng.png" alt="HOMAG" />
+            </div>
+            <div class="edu_text">
+              <div class="P2">Język angielski</div>
+              <div class="P1">średniozaawansowany (B2)</div>
+            </div>
+          </div>
           <div class="edu_container">
-            <div><img class="edu_picture" src="image/de.png" alt="HOMAG"></div>
+            <div>
+              <img class="edu_picture" src="image/de.png" alt="HOMAG" />
+            </div>
             <div class="edu_text">
               <div class="P2">Język niemiecki</div>
               <div class="P1">średni (B1)</div>
             </div>
-          </div> 
+          </div>
           <div class="edu_container">
-            <div><img class="edu_picture" src="image/html.png" alt="HOMAG"></div>
+            <div>
+              <img class="edu_picture" src="image/html.png" alt="HOMAG" />
+            </div>
             <div class="edu_text">
               <div class="P2">HTML</div>
               <div class="P1">podstawowy</div>
             </div>
-          </div> 
+          </div>
           <div class="edu_container">
-            <div><img class="edu_picture" src="image/css.png" alt="HOMAG"></div>
+            <div>
+              <img class="edu_picture" src="image/css.png" alt="HOMAG" />
+            </div>
             <div class="edu_text">
               <div class="P2">CSS</div>
               <div class="P1">podstawowy</div>
             </div>
-          </div> 
+          </div>
           <div id="hobby" class="for_link"></div>
           <div class="EP0">Zainteresowania</div>
           <div class="edu_container">
-              <div><img class="edu_picture" src="image/lego.png" alt="HOMAG"></div>
-              <div class="edu_text">
-                <div class="P2">Kolekcjonowanie klocków lego
-                </div>
-                <div class="P5">Trendy ekologiczne są ważne, ale kiedy usłyszałem że LEGO zamierza skończyć z produkcją klocków z tworzyw sztucznych i przejść na trzcinę cukrową
-                  postanowiłem zacząć zbierać klocki, aby zebrać trochę starych dobrych plastikowych zestawów. W taki sposób zacząłem kolekcjonować zestawy klocków LEGO, co przerodziło się w pewnego rodzaju hobby.
+            <div>
+              <img class="edu_picture" src="image/lego.png" alt="HOMAG" />
+            </div>
+            <div class="edu_text">
+              <div class="P2">Kolekcjonowanie klocków lego</div>
+              <div class="P5">
+                Trendy ekologiczne są ważne, ale kiedy usłyszałem że LEGO
+                zamierza skończyć z produkcją klocków z tworzyw sztucznych i
+                przejść na trzcinę cukrową postanowiłem zacząć zbierać klocki,
+                aby zebrać trochę starych dobrych plastikowych zestawów. W taki
+                sposób zacząłem kolekcjonować zestawy klocków LEGO, co
+                przerodziło się w pewnego rodzaju hobby.
               </div>
-              </div>
-          </div> 
+            </div>
+          </div>
           <div class="gal">
             <div class="EP0">Zdjęcia:</div>
             <div class="galery">
-              <div class="column1"><img class="galery_picture" src="image/L1.jpg" alt=""></div>
-              <div class="column2"><img class="galery_picture" src="image/L2.jpg" alt=""></div>
+              <div class="column1">
+                <img class="galery_picture" src="image/L1.jpg" alt="" />
+              </div>
+              <div class="column2">
+                <img class="galery_picture" src="image/L2.jpg" alt="" />
+              </div>
             </div>
           </div>
           <div class="space"></div>
           <div class="edu_container">
-            <div><img class="edu_picture" src="image/watch.jpg" alt="HOMAG"></div>
+            <div>
+              <img class="edu_picture" src="image/watch.jpg" alt="HOMAG" />
+            </div>
             <div class="edu_text">
               <div class="P2">Naprawianie zegarków mechanicznych</div>
-              <div class="P5">Jednym z moich zainteresowań jest naprawianie zegarków mechanicznych. 
-                Wszystko zaczeło się kiedy kupiłem sobie pierwszy stary mechaniczny zegarek, a po około dwóch tygoniach złamałem w nim wskazówkę.
-                Ponieważ lokalni zegarmistrzowie nie byli w stanie naprawić uszkodzenia, postanowiłem poszukać na Internecie i znalazłem ogłoszenie w którym były wskazówki jakie potrzebuje oraz wiele innych części (łącznie około 10 kg)
-                Cena jaką sprzedający zażyczył sobie za samę wskazówki była tylko nieznacznie mniejsza od tego co chciał za wszystko, więc kupiłem wszystko. I tak się zaczeło.
-                Mając 10 kg części metodą prób i błędów (na początku było więcej błędów) nauczyłem się naprawiać zegarki i wiele z kupionych części złożyłem kilkanaście działających egzemplarzy.
-            </div>
+              <div class="P5">
+                Jednym z moich zainteresowań jest naprawianie zegarków
+                mechanicznych. Wszystko zaczeło się kiedy kupiłem sobie pierwszy
+                stary mechaniczny zegarek, a po około dwóch tygoniach złamałem w
+                nim wskazówkę. Ponieważ lokalni zegarmistrzowie nie byli w
+                stanie naprawić uszkodzenia, postanowiłem poszukać na Internecie
+                i znalazłem ogłoszenie w którym były wskazówki jakie potrzebuje
+                oraz wiele innych części (łącznie około 10 kg) Cena jaką
+                sprzedający zażyczył sobie za samę wskazówki była tylko
+                nieznacznie mniejsza od tego co chciał za wszystko, więc kupiłem
+                wszystko. I tak się zaczeło. Mając 10 kg części metodą prób i
+                błędów (na początku było więcej błędów) nauczyłem się naprawiać
+                zegarki i wiele z kupionych części złożyłem kilkanaście
+                działających egzemplarzy.
+              </div>
             </div>
           </div>
           <div class="gal">
             <div class="EP0">Zdjęcia:</div>
             <div class="galery">
-              <div class="column1"><img class="galery_picture" src="image/20220731_213003.jpg" alt=""></div>
-              <div class="column2"><img class="galery_picture" src="image/20220731_213116.jpg" alt=""></div>
+              <div class="column1">
+                <img
+                  class="galery_picture"
+                  src="image/20220731_213003.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="column2">
+                <img
+                  class="galery_picture"
+                  src="image/20220731_213116.jpg"
+                  alt=""
+                />
+              </div>
             </div>
           </div>
         </div>
-    <div></div>
-    </div>
-
-
+        <div></div>
       </div>
-
-
-        
-</body>
+    </div>
+  </body>
 </html>
