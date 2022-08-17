@@ -23,15 +23,26 @@
         <img class="me2" src="image/JA.png" alt="Grzegorz Jezowski" />
       </div>
       <div class="top_center">
+        <!--  -->
         <input
+          id="myInput"
           class="search"
           type="text"
-          placeholder="Wyszukaj"
-          id="search_in"
+          placeholder="Search in Google"
         />
-        <button class="top_button" onclick="search()">
+        <button id="myBtn" class="top_button" onclick="search()">
           <img class="search_picture" src="image/search.svg" alt="Search" />
         </button>
+        <script>
+          var input = document.getElementById("myInput");
+          input.addEventListener("keypress", function (event) {
+            if (event.key === "Enter") {
+              event.preventDefault();
+              search();
+            }
+          });
+        </script>
+        <!--  -->
       </div>
       <div class="top_right">
         <a href="CV - ENG.HTML"><button class="top_button">EN</button></a>

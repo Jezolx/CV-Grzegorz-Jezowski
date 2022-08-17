@@ -16,22 +16,33 @@
     <link rel="stylesheet" href="top.css" />
     <link rel="stylesheet" href="content.css" />
   </head>
+  <script src="code.js"></script>
   <body>
-    <script src="code.js"></script>
     <div class="top">
       <div class="top_left">
         <img class="me2" src="image/JA.png" alt="Grzegorz Jezowski" />
       </div>
       <div class="top_center">
+        <!--  -->
         <input
+          id="myInput"
           class="search"
           type="text"
-          placeholder="Wyszukaj"
-          id="search_in"
+          placeholder="Wyszukaj w Google"
         />
-        <button class="top_button" onclick="search()">
+        <button id="myBtn" class="top_button" onclick="search()">
           <img class="search_picture" src="image/search.svg" alt="Search" />
         </button>
+        <script>
+          var input = document.getElementById("myInput");
+          input.addEventListener("keypress", function (event) {
+            if (event.key === "Enter") {
+              event.preventDefault();
+              search();
+            }
+          });
+        </script>
+        <!--  -->
       </div>
       <div class="top_right">
         <a href="CV - ENG.HTML"><button class="top_button">EN</button></a>

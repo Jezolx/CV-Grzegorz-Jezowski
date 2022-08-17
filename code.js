@@ -1,4 +1,4 @@
 function search(){
-    let text = document.getElementById("search_in").value;
+    let text = document.getElementById("myInput").value;
     window.location.href = "https://www.google.pl/search?q="+text;
 }
